@@ -1,0 +1,15 @@
+By running npx sequelize-cli init, you'll create a basic project structure for your Sequelize application.After initializing the Sequelize project using the CLI, the resulting project structure will include several subdirectories: config, migrations, models, and seeders
+
+sequelize init              Initializes project   
+sequelize init:config       Initializes configuration
+sequelize init:migrations   Initializes migrations  
+sequelize init:models       Initializes models    
+sequelize init:seeders      Initializes seeders   
+
+config/: This folder contains configuration files for Sequelize. The config.json file usually holds the database connection configurations like database name, username, password, host, dialect (e.g., MySQL, PostgreSQL), etc.
+
+migrations/: Migrations are JavaScript files that describe changes to the database schema. Each migration file typically contains two functions: up, which describes the changes to be applied to the database, and down, which describes how to revert those changes. Sequelize CLI creates migration files in this folder to help manage database schema changes in a version-controlled manner.
+
+models/: This folder contains JavaScript files defining Sequelize models. Each model file typically represents a table in the database. The index.js file in this folder is usually used to import all the model definitions, associate them if necessary, and export them as a single object.
+
+seeders/: Seeders are JavaScript files that contain dummy data to populate the database during development or testing. These files are useful for creating initial data sets for testing or when starting a new project.
